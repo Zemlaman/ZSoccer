@@ -25,6 +25,7 @@
 		2A7DE19C27EA5B0400B226D8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DE19B27EA5B0400B226D8 /* Team.swift */; };
 		2A7DE19E27EA5B2600B226D8 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DE19D27EA5B2600B226D8 /* TeamController.swift */; };
 		2A7DE1A027EA764E00B226D8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DE19F27EA764E00B226D8 /* Match.swift */; };
+		2A7DE1A227EBAE2100B226D8 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DE1A127EBAE2100B226D8 /* TeamCell.swift */; };
 		2AF16D4527DBF9CE00D70695 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF16D4427DBF9CE00D70695 /* MatchCell.swift */; };
 		E02DD836E716E931EB3A1EB1 /* Pods_ZSoccer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E412F9436B2E26648D0EC9 /* Pods_ZSoccer.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		2A7DE19B27EA5B0400B226D8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		2A7DE19D27EA5B2600B226D8 /* TeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
 		2A7DE19F27EA764E00B226D8 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		2A7DE1A127EBAE2100B226D8 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		2AF16D4427DBF9CE00D70695 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		74C1D666012C946B306E4641 /* Pods-ZSoccer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSoccer.release.xcconfig"; path = "Target Support Files/Pods-ZSoccer/Pods-ZSoccer.release.xcconfig"; sourceTree = "<group>"; };
 		7630841043F0D3235AE24400 /* Pods-ZSoccer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSoccer.debug.xcconfig"; path = "Target Support Files/Pods-ZSoccer/Pods-ZSoccer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				2A7DE19B27EA5B0400B226D8 /* Team.swift */,
 				2A7DE19D27EA5B2600B226D8 /* TeamController.swift */,
 				2A7DE19F27EA764E00B226D8 /* Match.swift */,
+				2A7DE1A127EBAE2100B226D8 /* TeamCell.swift */,
 			);
 			path = ZSoccer;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				2A5B08B727D0FB8000B3B600 /* SceneDelegate.swift in Sources */,
 				2A7DE19E27EA5B2600B226D8 /* TeamController.swift in Sources */,
 				2A41B0A827D6A3AC00C01897 /* Article.swift in Sources */,
+				2A7DE1A227EBAE2100B226D8 /* TeamCell.swift in Sources */,
 				2A7DE1A027EA764E00B226D8 /* Match.swift in Sources */,
 				2A1527F327E0D24100CE4345 /* MatchController.swift in Sources */,
 				2AF16D4527DBF9CE00D70695 /* MatchCell.swift in Sources */,

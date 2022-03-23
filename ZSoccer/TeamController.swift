@@ -9,48 +9,69 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
-/*
-class TeamController: UIViewController, UITableViewDelegate {
+
+class TeamController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tvNews: UITableView!
-    private var teams: [Team] = []
+    @IBOutlet weak var tvTeams: UITableView!
+    
+    private var team: [Team] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        tvNews.delegate = self
-        //tvNews.dataSource = self
+        tvTeams.delegate = self
+        tvTeams.dataSource = self
+    
+        
+        let headers: HTTPHeaders = [
+            "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+            "X-RapidAPI-Key": "2758506f2cmsh8c29540ca1126e3p11d5adjsn29d34da85e89"
+        ]
+        
+        let url = "https://api-football-v1.p.rapidapi.com/v3/teams?league=39&season=2021"
    
-    AF.request("https://newsapi.org/v2/everything?q=apple&sortBy=popularity&apiKey=1f822e3a8be14d43a008bcb21d7d00c5").responseJSON {
+    AF.request(url, headers: headers).responseJSON {
             (response) in let json = try! JSON(data: response.data!)
             
         print(json)
         
-            let arr = json["articles"].arrayValue
+            let arr = json["response"].arrayValue
             
-            for article in arr {
-                let a = Article(title: article["title"].stringValue, description: article["description"].stringValue, link: article["url"].stringValue)
-                self.news.append(a)
+            for team in arr {
+                let a = Team(name: team["team"]["name"].stringValue,
+                             country: team["team"]["country"].stringValue,
+                            logoTeam: team["team"]["logo"].stringValue)
+                
+                self.team.append(a)
+                print(a)
                 
             }
-            self.tvNews.reloadData()
+            self.tvTeams.reloadData()
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return team.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Abc", for: indexPath) as! Abc
         
-        cell.title.text = news[indexPath.item].title
-        cell.descriptionLabel.text = news[indexPath.item].description
-        cell.link.text = news[indexPath.item].link
+        let cell: TeamCell = tvTeams.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! TeamCell
+        
+        cell.nameLbl.text = team[indexPath.item].name
+        cell.countryLbl.text = team[indexPath.item].country
+        getData(from: URL(string: team[indexPath.item].logoTeam)!) { data, response, error in
+            guard let data = data, error == nil else { return }
+            // always update the UI from the main thread
+            DispatchQueue.main.async() { [weak self] in
+                cell.logo.image = UIImage(data: data)
+            }
+        }
+        
 
-        return cell;
+        return cell
    
     }
-
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
 }
 
-*/

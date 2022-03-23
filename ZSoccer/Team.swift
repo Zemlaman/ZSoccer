@@ -8,15 +8,19 @@
 import Foundation
 import UIKit
 
-/*class Team: UITableViewCell {
+class Team {
     
     public let name: String
-    public let logoLeague: UIImage
-    public let logoTeam: UIImage
+    public let country: String
+    public let logoTeam: String
     
-    //init(name: String, logoLeague: UIImage, logoTeam: UIImage)
+    init(name: String, country: String, logoTeam: String) {
+        self.name = name
+        self.logoTeam = logoTeam
+        self.country = country
+    }
 
     
     
 }
- */
+
