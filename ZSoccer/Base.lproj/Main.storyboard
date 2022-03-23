@@ -174,6 +174,9 @@
                                     <segment title="Today"/>
                                     <segment title="Tomorrow"/>
                                 </segments>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="mnl-ae-Mwp" eventType="valueChanged" id="oPz-Gq-odV"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ZSoccer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIB-T8-Pva">
                                 <rect key="frame" x="20" y="44" width="190" height="51"/>

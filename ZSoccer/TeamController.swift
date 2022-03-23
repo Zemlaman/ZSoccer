@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+/*
 class TeamController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tvNews: UITableView!
@@ -19,7 +19,7 @@ class TeamController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tvNews.delegate = self
         //tvNews.dataSource = self
-    /*
+   
     AF.request("https://newsapi.org/v2/everything?q=apple&sortBy=popularity&apiKey=1f822e3a8be14d43a008bcb21d7d00c5").responseJSON {
             (response) in let json = try! JSON(data: response.data!)
             
@@ -48,8 +48,9 @@ class TeamController: UIViewController, UITableViewDelegate {
         cell.link.text = news[indexPath.item].link
 
         return cell;
-     */
+   
     }
 
 }
 
+*/
